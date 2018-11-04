@@ -49,6 +49,7 @@ def _print_welcome():
     print('Welcome to Platzi Ventas')
     print('*'*50)
     print('What would you like to do today?')
+    print('[L]ist clients')
     print('[C]reate client')
     print('[U]pdate client')
     print('[D]elete client')
@@ -69,6 +70,10 @@ if __name__ == '__main__':
         client_name = _get_client_name()
         create_client(client_name)
         list_clients()
+    
+    elif command == 'L':
+        list_clients()
+
     elif command == 'D':
         client_name = _get_client_name()
         delete_client(client_name)
